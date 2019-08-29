@@ -41,7 +41,7 @@ while True:
         for line in data_list: # delete the colunm which is built for storing order number
             line.pop(4)
         # write data_list into csv file
-        with open('places_copy.csv', 'w', newline='', encoding='utf-8') as myfile: # confusing garbled... :(
+        with open('places.csv', 'w', newline='', encoding='utf-8') as myfile: # confusing garbled... :(
             file_w = csv.writer(myfile)
             for row in data_list:
                 file_w.writerow(row)
