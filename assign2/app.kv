@@ -1,0 +1,65 @@
+BoxLayout:
+
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_x: 0.3
+        Button:
+            id: required_place_button
+            text: "List Required"
+            on_release: app.select_required_places()
+        Button:
+            id: completed_place_button
+            text: "List Completed"
+            on_release: app.select_completed_places()
+        Label:
+            id: add_place_button
+            text: "Add new place"
+        Label:
+            text: "Place city:"
+        TextInput:
+            id: text_city
+            value: ''
+            size_hint_y: None
+            height: '48dp'
+            multiline: False
+            write_tab: False
+        Label:
+            text: "Place country:"
+        TextInput:
+            id: text_country
+            value: ''
+            size_hint_y: None
+            height: '48dp'
+            multiline: False
+            write_tab: False
+        Label:
+            text: "Place priority"
+        TextInput:
+            id: text_priority
+            value: ''
+            size_hint_y: None
+            height: '48dp'
+            multiline: False
+            write_tab: False
+        Button:
+            text: "Add Place"
+            on_release: app.add_places(text_city.text,text_country.text,text_priority.text)
+        Button:
+            text: "Clear"
+            on_release: app.clear_text()
+
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            id: place_priority
+            size_hint_y: 0.1
+            text: ""
+#
+        BoxLayout:
+            id: box
+            orientation: 'vertical'
+        Label:
+            id: description
+            size_hint_y: 0.1
+            text: ""
+#
