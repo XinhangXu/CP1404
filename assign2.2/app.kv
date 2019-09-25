@@ -1,0 +1,24 @@
+
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'horizontal'
+        BoxLayout:
+            orientation: 'vertical'
+            id: left_layout
+            width:400
+            cols: 1
+            size_hint:None, 1
+        BoxLayout:
+            orientation: 'vertical'
+            BoxLayout:
+                orientation: 'vertical'
+                id: top_layout
+                size_hint: 1, .1
+            BoxLayout:
+                orientation: 'vertical'
+                id: right_layout
+                spacing: 1
+            Label:
+                size_hint_y:0.4
+                id: bottom_layout
